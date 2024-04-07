@@ -9,6 +9,7 @@ Thumbs.db
 
 *.blob
 
+*.sln
 *.csproj
 .vsconfig
 
