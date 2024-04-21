@@ -10,9 +10,10 @@ namespace BomberMan {
 
     public class PlayerBaker : Baker<PlayerAuthoring> {
         public override void Bake(PlayerAuthoring authoring) {
-            var entity = GetEntity(TransformUsageFlags.None);
-            AddComponent(entity, new PlayerComponent {
-                Velocity = new float3(0, 0, 0)
+            var entity = GetEntity(TransformUsageFlags.Dynamic);
+            AddComponent(entity, new PlayerComponent { });
+            AddComponent(entity, new MoveableComponent {
+                Velocity = new float3(0, 0.1f, 0)
             });
         }
     }
